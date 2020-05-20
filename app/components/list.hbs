@@ -1,0 +1,8 @@
+<button {{on "click" this.render}}>Render</button>
+<ul>
+  {{#animated-each this.list use=this.transition as |item|}}
+    <li>
+      <Item @item={{item}} />
+    </li>
+  {{/animated-each}}
+</ul>
