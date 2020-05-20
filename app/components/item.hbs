@@ -1,13 +1,13 @@
 <div>
   {{@item}}
-  <br>
   <button {{on "click" this.animate}}>
     <AnimatedContainer class={{this.style.animatedContainer}}>
       {{#animated-if this.isAnimating use=fade duration=200}}
         Animating...
-      {{else}}
-        Begin Nested Animation
       {{/animated-if}}
+      {{#unless this.isAnimating}}
+        Begin Nested Animation
+      {{/unless}}
     </AnimatedContainer>
   </button>
 </div>
